@@ -17,16 +17,17 @@ void distanceSensorOn(){
 }
 
 void checkingForHuman(){
+  humanIsHere = false;//not
 
   distanceSensorOn();
 
-  if (distanceToHuman < 55){
+  if (distanceToHuman < 80){
+    humanIsHere = true;
     Serial.print("human is here!! distance: ");
     Serial.println(distanceToHuman);
-    humanIsHere == true;
   }
   else{
-    Serial.print("not here ");
+    Serial.println("not here ");
   }
 
 }
